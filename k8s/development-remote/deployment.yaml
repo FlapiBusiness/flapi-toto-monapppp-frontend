@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dev-customerName-projectName-frontend-deployment
-  namespace: dev-customerName-projectName-frontend
+  name: dev-toto-MonApppp-frontend-deployment
+  namespace: dev-toto-MonApppp-frontend
   labels:
-    app: dev-customerName-projectName-frontend
+    app: dev-toto-MonApppp-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dev-customerName-projectName-frontend
+      app: dev-toto-MonApppp-frontend
   template:
     metadata:
       labels:
-        app: dev-customerName-projectName-frontend
+        app: dev-toto-MonApppp-frontend
     spec:
       containers:
-        - name: dev-customerName-projectName-frontend
-          image: corentin35/customerName-projectName-frontend:develop-${TAG_VERSION}
+        - name: dev-toto-MonApppp-frontend
+          image: corentin35/toto-MonApppp-frontend:develop-${TAG_VERSION}
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
